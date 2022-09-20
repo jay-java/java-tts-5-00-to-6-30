@@ -1,0 +1,17 @@
+interface inter1{
+	
+}
+interface inter2{
+	
+}
+interface inter3{
+	
+}
+class Call{
+	
+}
+public class InterfaceDemo {
+	public static void main(String[] args) {
+		
+	}
+}

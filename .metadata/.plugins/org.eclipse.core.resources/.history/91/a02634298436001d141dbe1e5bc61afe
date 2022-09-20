@@ -1,0 +1,13 @@
+class Emp{
+	int id;
+	String ename;
+	static String cname ="tops";
+	Emp(int id, String ename){
+		
+	}
+}
+public class StaticKeyword {
+	public static void main(String[] args) {
+		Emp e1 = new Emp();
+	}
+}

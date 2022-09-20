@@ -1,0 +1,17 @@
+
+abstract class RBI{
+	
+	abstract public void interest();
+	abstract public void homeloan();
+}
+class SBI{
+	
+}
+class JAVA{
+	
+}
+public class ABstractionDemo {
+	public static void main(String[] args) {
+		
+	}
+}

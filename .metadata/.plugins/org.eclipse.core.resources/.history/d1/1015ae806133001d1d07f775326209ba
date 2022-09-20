@@ -1,0 +1,8 @@
+
+public class CommandlineArgument {
+	public static void main(String[] args) {
+		int i = Integer.parseInt(args[0]);
+		int i = Integer.parseInt(args[1]);
+		int i = Integer.parseInt(args[2]);
+	}
+}

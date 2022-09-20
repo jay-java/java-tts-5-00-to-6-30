@@ -1,0 +1,17 @@
+
+class Mobile{
+	String color;
+	double price;
+	String config;
+	public void setColor(String color) {
+		this.color=color;
+	}
+	public void getColor() {
+		return color;
+	}
+}
+public class Encapsulation {
+	public static void main(String[] args) {
+		
+	}
+}

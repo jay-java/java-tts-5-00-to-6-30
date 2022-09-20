@@ -1,0 +1,17 @@
+
+class Overload{
+	public void run() {
+		System.out.println("first run method");
+	}
+	public void run(int i) {
+		System.out.println("first run method");
+	}
+	public void run() {
+		System.out.println("first run method");
+	}
+}
+public class Polymorphism {
+	public static void main(String[] args) {
+		
+	}
+}

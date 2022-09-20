@@ -1,0 +1,33 @@
+
+class Mobile{
+	String color;
+	double price;
+	String config;
+	public void setColor(String color) {
+		this.color=color;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setPrice(double price) {
+		this.price=price;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setConfig(String config) {
+		this.config=config;
+	}
+	public String getConfig() {
+		return config;
+	}
+}
+public class Encapsulation {
+	public static void main(String[] args) {
+		Mobile m1 = new Mobile();
+		m1.setColor("black");
+		m1.setConfig("snapdragon");
+		m1.setPrice(10000.99);
+		System.out.println(m1.getColor()+" : "+m1.getConfig()+" : "+);
+	}
+}

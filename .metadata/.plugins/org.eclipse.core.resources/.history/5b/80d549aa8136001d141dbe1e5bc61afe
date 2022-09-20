@@ -1,0 +1,11 @@
+
+class Constructor{
+	int i;
+	String name;
+	double d;
+}
+public class ConstructorDemo {
+	public static void main(String[] args) {
+		System.out.println("hello");
+	}
+}

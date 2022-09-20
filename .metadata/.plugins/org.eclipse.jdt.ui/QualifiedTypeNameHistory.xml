@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="StringBuffer"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="StringBufferDemo"/>
+    <fullyQualifiedTypeName name="abc"/>
+    <fullyQualifiedTypeName name="Child"/>
+    <fullyQualifiedTypeName name="GrandParent"/>
+    <fullyQualifiedTypeName name="B"/>
+    <fullyQualifiedTypeName name="C"/>
+    <fullyQualifiedTypeName name="copy"/>
+    <fullyQualifiedTypeName name="Constructor"/>
+    <fullyQualifiedTypeName name="Emp"/>
+    <fullyQualifiedTypeName name="Overload"/>
+    <fullyQualifiedTypeName name="E"/>
+</qualifiedTypeNameHistroy>

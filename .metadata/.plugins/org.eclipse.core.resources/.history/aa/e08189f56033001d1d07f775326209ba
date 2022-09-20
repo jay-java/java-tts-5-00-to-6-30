@@ -1,0 +1,6 @@
+
+public class CommandlineArgument {
+	public static void main(String[] args) {
+		
+	}
+}

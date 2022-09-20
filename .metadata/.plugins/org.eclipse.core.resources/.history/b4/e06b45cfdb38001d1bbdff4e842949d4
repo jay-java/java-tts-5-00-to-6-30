@@ -1,0 +1,28 @@
+
+abstract class RBI{
+	abstract public void interest();
+	abstract public void homeloan();
+}
+class SBI extends RBI{
+
+	@Override
+	public void interest() {
+		// TODO Auto-generated method stub
+		System.out.println("sbi interest : 7%");
+	}
+
+	@Override
+	public void homeloan() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+class JAVA{
+	
+}
+public class ABstractionDemo {
+	public static void main(String[] args) {
+		
+	}
+}

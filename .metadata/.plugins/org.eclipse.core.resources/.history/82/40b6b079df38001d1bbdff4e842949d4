@@ -1,0 +1,22 @@
+abstract class RBI1{
+	abstract public void interest();
+	abstract public void homeloan();
+	public void repoRate() {
+		System.out.println("repo rate : 4%");
+	}
+}
+class SBI1 extends RBI1{
+	int accno = 10;
+	public void interest() {
+		i++;
+		System.out.println("sbi interest : 7% ");
+	}
+	public void homeloan() {
+		System.out.println("SBI home loan : 8%");
+	}
+}
+public class FinalKeyword {
+	public static void main(String[] args) {
+		
+	}
+}

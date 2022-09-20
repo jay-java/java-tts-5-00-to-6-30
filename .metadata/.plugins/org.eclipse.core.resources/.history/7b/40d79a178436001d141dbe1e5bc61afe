@@ -1,0 +1,10 @@
+class Emp{
+	int id;
+	String ename;
+	static String cname ="tops";
+}
+public class StaticKeyword {
+	public static void main(String[] args) {
+		
+	}
+}

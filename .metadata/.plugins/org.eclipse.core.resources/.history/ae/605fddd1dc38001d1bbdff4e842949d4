@@ -1,0 +1,12 @@
+
+class Mobile{
+	String color;
+	double price;
+	String config;
+	
+}
+public class Encapsulation {
+	public static void main(String[] args) {
+		
+	}
+}

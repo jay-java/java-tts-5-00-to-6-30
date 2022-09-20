@@ -1,0 +1,15 @@
+
+class RBI{
+	public void interest();
+}
+class SBI{
+	
+}
+class JAVA{
+	
+}
+public class ABstractionDemo {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,16 @@
+
+class RBI{
+	abstract public void interest();
+	public void homeloan();
+}
+class SBI{
+	
+}
+class JAVA{
+	
+}
+public class ABstractionDemo {
+	public static void main(String[] args) {
+		
+	}
+}
