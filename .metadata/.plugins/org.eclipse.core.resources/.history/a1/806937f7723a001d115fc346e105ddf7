@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class ExceptionHandling {
+	public static void main(String[] args) {
+		int i;
+		int j;
+//		Scanner sc  =new Scanner(System.in);
+//		System.out.println("enter i  = ");
+//		i = sc.nextInt();
+//		System.out.println("enter j  = ");
+//		j = sc.nextInt();
+		int k = i/j;
+		System.out.println(k);
+	}
+}

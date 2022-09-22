@@ -1,0 +1,26 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+//1.try 2.catch 3.finally 4.throw 5.throws
+public class ExceptionHandling {
+	public static void main(String[] args) {
+		int i;
+		int j;
+		try {
+			Scanner sc  =new Scanner(System.in);
+			System.out.println("enter i  = ");
+			i = sc.nextInt();
+			System.out.println("enter j  = ");
+			j = sc.nextInt();
+			int k = i/j;
+			System.out.println(k);
+		} catch (ArithmeticException e) {
+			System.out.println("denominator cannot be zero");
+		}
+		catch(InputMismatchException e) {
+			System.out.println("denominator should be numeric value");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
