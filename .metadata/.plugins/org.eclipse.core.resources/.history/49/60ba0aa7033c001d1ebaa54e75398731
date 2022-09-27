@@ -1,0 +1,12 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileOutpusInputStream {
+	public static void main(String[] args) throws IOException {
+		FileOutputStream fos = new FileOutputStream("t1.txt");
+		String s= "file handling by file output input class";
+		byte[] b = s.getBytes();
+		fos.write(b);
+	}
+}

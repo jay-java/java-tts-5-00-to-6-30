@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class StudentData{
+	int id;
+	String name;
+	float per;
+	StudentData(){
+		Scanner sc =new Scanner(System.in);
+		System.out.print("enter id : ");
+		id = sc.nextInt();
+		System.out.print("enter name : ");
+		name = sc.next();
+		System.out.print("enter per : ");
+		per = sc.nextFloat();
+	}
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+}
+public class SerializationDeSeDemo {
+	public static void main(String[] args) {
+		
+	}
+}

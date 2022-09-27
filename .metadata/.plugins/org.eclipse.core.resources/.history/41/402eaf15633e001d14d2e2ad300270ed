@@ -1,0 +1,52 @@
+class mobil implements Comparable<mobile>{
+	int ram;
+	String model;
+	double price;
+	public int getRam() {
+		return ram;
+	}
+	public void setRam(int ram) {
+		this.ram = ram;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void setModel(String model) {
+		this.model = model;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public mobile(int ram, String model, double price) {
+		super();
+		this.ram = ram;
+		this.model = model;
+		this.price = price;
+	}
+	public mobile() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "mobile [ram=" + ram + ", model=" + model + ", price=" + price + "]";
+	}
+	@Override
+	public int compareTo(mobile o) {
+		if(this.getPrice()>o.getPrice()) {
+			return 1;
+		}
+		else {
+			return -1;
+		}
+	}
+	
+}
+public class ComparatorDemoi {
+	public static void main(String[] args) {
+		
+	}
+}

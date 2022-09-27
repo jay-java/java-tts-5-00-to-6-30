@@ -1,0 +1,8 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class FileOutpusInputStream {
+	public static void main(String[] args) throws FileNotFoundException {
+		FileOutputStream fos = new FileOutputStream("t1.txt");
+	}
+}

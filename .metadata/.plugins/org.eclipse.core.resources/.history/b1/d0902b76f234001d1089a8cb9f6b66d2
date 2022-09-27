@@ -1,6 +1,0 @@
-
-public class StringBufferDemo {
-	public static void main(String[] args) {
-		StringBufferDemo s = new StringBufferDemo("hello java");
-	}
-}

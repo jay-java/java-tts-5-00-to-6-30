@@ -1,0 +1,14 @@
+
+class EmpData{
+	int id;
+	String name;
+	double salary;
+	EmpData(){
+		
+	}
+}
+public class ListUse {
+	public static void main(String[] args) {
+		
+	}
+}

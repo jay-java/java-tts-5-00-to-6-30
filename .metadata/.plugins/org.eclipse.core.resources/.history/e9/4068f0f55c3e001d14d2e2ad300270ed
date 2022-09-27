@@ -1,0 +1,16 @@
+
+class EmpData{
+	int id;
+	String name;
+	double salary;
+	EmpData(int id,String name,double salary){
+		this.id=id;
+		this.name=name;
+		this.salary=slary;
+	}
+}
+public class ListUse {
+	public static void main(String[] args) {
+		
+	}
+}

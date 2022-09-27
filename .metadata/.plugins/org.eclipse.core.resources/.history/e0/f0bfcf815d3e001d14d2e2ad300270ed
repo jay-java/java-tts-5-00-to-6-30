@@ -1,0 +1,7 @@
+import java.util.Vector;
+
+public class VerctorDemo {
+	public static void main(String[] args) {
+		Vector vr = new Vector();
+	}
+}

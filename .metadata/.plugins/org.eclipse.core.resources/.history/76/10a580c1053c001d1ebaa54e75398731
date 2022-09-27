@@ -1,0 +1,32 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Scanner;
+
+class StudentData{
+	int id;
+	String name;
+	float per;
+	StudentData(){
+		Scanner sc =new Scanner(System.in);
+		System.out.print("enter id : ");
+		id = sc.nextInt();
+		System.out.print("enter name : ");
+		name = sc.next();
+		System.out.print("enter per : ");
+		per = sc.nextFloat();
+	}
+	@Override
+	public String toString() {
+		return "StudentData  : ["+" id : "+id+" name : "+name+" per : "+per+"]";
+	}
+}
+public class SerializationDeSeDemo {
+	public static void main(String[] args) throws IOException {
+		StudentData s = new StudentData();
+		
+		FileOutputStream fos = new FileOutputStream("student.txt");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+	}
+}

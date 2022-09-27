@@ -1,0 +1,7 @@
+import java.io.FileOutputStream;
+
+public class FileOutpusInputStream {
+	public static void main(String[] args) {
+		FileOutputStream fos = new FileOutputStream(null;)
+	}
+}

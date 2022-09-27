@@ -1,0 +1,11 @@
+
+class StudentData{
+	int id;
+	String name;
+	float per;
+}
+public class SerializationDeSeDemo {
+	public static void main(String[] args) {
+		
+	}
+}

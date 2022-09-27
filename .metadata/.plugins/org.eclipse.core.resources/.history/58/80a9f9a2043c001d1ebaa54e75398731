@@ -1,0 +1,9 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWriterReaderDemo {
+	public static void main(String[] args) throws IOException {
+		FileWriter fr = new FileWriter("t2.txt");
+		
+	}
+}
