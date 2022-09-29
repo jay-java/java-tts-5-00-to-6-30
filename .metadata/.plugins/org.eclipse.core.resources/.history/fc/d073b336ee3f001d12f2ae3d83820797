@@ -1,0 +1,10 @@
+import javax.swing.JFrame;
+
+public class SwingDemo {
+	public SwingDemo() {
+		JFrame fr = new JFrame("MyProject");
+	}
+	public static void main(String[] args) {
+		new SwingDemo();
+	}
+}

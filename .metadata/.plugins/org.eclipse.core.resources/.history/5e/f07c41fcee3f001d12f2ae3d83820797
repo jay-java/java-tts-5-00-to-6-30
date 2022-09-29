@@ -1,0 +1,13 @@
+import javax.swing.JFrame;
+
+public class SwingDemo {
+	public SwingDemo() {
+		JFrame fr = new JFrame("MyProject");
+		fr.setVisible(true);
+		fr.setSize(600, 500);
+		fr.setLayout(null);
+	}
+	public static void main(String[] args) {
+		new SwingDemo();
+	}
+}
