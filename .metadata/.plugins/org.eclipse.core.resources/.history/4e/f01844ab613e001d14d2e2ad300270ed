@@ -1,9 +1,0 @@
-class mobile{
-	int ram;
-	String model;
-	double price;
-
-}
-public class ComparableDemo {
-
-}
