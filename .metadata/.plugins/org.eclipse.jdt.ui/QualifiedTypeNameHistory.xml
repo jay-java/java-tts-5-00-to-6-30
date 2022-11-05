@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="StringBuffer"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-    <fullyQualifiedTypeName name="StringBufferDemo"/>
-    <fullyQualifiedTypeName name="abc"/>
     <fullyQualifiedTypeName name="Child"/>
     <fullyQualifiedTypeName name="GrandParent"/>
     <fullyQualifiedTypeName name="B"/>
@@ -50,14 +45,19 @@
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="SwingDemo"/>
     <fullyQualifiedTypeName name="java.lang.Long"/>
-    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="com.mysql.cj.conf.AbstractPropertyDefinition"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="connection.DBConnection"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="dao.UserDao"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="model.User"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="Connectionl.DBConnection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="Model.Seller"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="Dao.SellerDao"/>
+    <fullyQualifiedTypeName name="services.Service"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
 </qualifiedTypeNameHistroy>
