@@ -10,7 +10,7 @@ import javax.mail.internet.MimeMessage;
 public class Service {
 	public void sendMail(String emailid,int num){
 		final String username  = "watchbaba750@gmail.com";
-		final String password  = "wmuvfmugpqrermsp";
+		final String password  = "jrulblulsypjubze";
  
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
@@ -30,15 +30,17 @@ public class Service {
 
 		System.out.println("session complete");
 		try {
- 
+			System.out.println("1");
 			Message message = new MimeMessage(session);
+			System.out.println("2");
 			message.setFrom(new InternetAddress(username));
+			System.out.println("3");
 			message.setRecipients(Message.RecipientType.TO,InternetAddress.parse(emailid));//to mail address.
+			System.out.println("4");
 			message.setSubject("Hi This Is OPT Testing");
 			message.setText("Hello This Is OTP Testing Through Java. And Your OTp Is : "+num);
-
+			System.out.println("5");
 			Transport.send(message);
- 
 			System.out.println("Done");
  
 		} catch (MessagingException e) {

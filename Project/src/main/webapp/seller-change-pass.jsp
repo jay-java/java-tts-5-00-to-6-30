@@ -175,34 +175,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="men">
 		<div class="container">
 			<div class="grid_1">
-				<h1>Verify</h1>
+				<h1>New Password</h1>
 			</div>
-			<%-- <div class="grid_1">
-				<%String msg1 = (String)request.getAttribute("msg"); %>
-				<%if(msg1!=null){ %>
-				<h4><%out.print(msg1); %></h4>
+			<div class="grid_1">
+				<%String msg = (String)request.getAttribute("msg"); %>
+				<%if(msg!=null){ %>
+				<h4><%out.print(msg); %></h4>
 				<%} %>
-			</div> --%>
+			</div>
+			<%String email = (String)request.getParameter("email"); %>
 			<div class="contact_form">
-			<%String email = (String)request.getAttribute("email"); %>
-			<%int otp = (Integer)request.getAttribute("otp");%>
 				<form action = "SellerController" method="post">
-					<input type="hidden" name="email" value="<%=email%>">
-					<input type="hidden" name="otp1" value="<%=otp%>">
 					<div class="col-md-12 to">
-						<input type="text" class="text" name="otp2">
+					<input type="hidden" class="text" name="email" value="<%=email%>">
+						<input type="text" class="text" name="np">
+						<input type="text" class="text" name="cnp">
 					</div>
 					<div class="clearfix"></div>
 					<div class="but__center">
-						<input type="submit" name="action" value="verify">
+						<input type="submit" name="action" value="new password">
 					</div>
 				</form>
 			</div>
 			<div class="grid_1">
-			<%String msg = (String)request.getAttribute("msg"); %>
-			<%if(msg!=null){ %>
-				<h4><%out.print(msg); %></h4>
-				<%} %>
+				<h3><a href="seller-forgot-password.jsp">Forgot Password ?</a></h3>
 			</div>
 		</div>
 	</div>
