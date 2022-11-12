@@ -1,0 +1,38 @@
+1. <form action="controller" method="post" enctype="multipart/form-data">
+
+2. @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 512, maxFileSize = 1024 * 1024 * 512, maxRequestSize = 1024 * 1024
+		* 512)
+
+3.
+before post:
+
+private String extractfilename(Part file) {
+		String cd = file.getHeader("content-disposition");
+		System.out.println(cd);
+		String[] items = cd.split(";");
+		for (String string : items) {
+			if (string.trim().startsWith("filename")) {
+				return string.substring(string.indexOf("=") + 2, string.length() - 1);
+			}
+		}
+		return "";
+	}
+
+
+4.In post
+
+String savePath = "C:\\Users\\tops\\eclipse-workspace\\DoctorFin\\src\\main\\webapp\\image";
+			File fileSaveDir = new File(savePath);
+			if (!fileSaveDir.exists()) {
+				fileSaveDir.mkdir();
+			}
+			Part file1 = request.getPart("image");
+			String fileName = extractfilename(file1);
+			file1.write(savePath + File.separator + fileName);
+			String filePath = savePath + File.separator + fileName;
+
+			String savePath2 = "C:\\Users\\tops\\eclipse-workspace\\DoctorFin\\src\\main\\webapp\\image";
+			File imgSaveDir = new File(savePath2);
+			if (!imgSaveDir.exists()) {
+				imgSaveDir.mkdir();
+			}
