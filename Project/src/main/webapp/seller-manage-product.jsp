@@ -1,3 +1,6 @@
+<%@page import="Dao.ProductDao"%>
+<%@page import="Model.Product"%>
+<%@page import="java.util.List"%>
 <%@page import="Model.Seller"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -10,56 +13,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Watches an E-Commerce online Shopping Category Flat
-	Bootstrap Responsive Website Template| Contact :: w3layouts</title>
+<title>Watches an E-Commerce online Shopping Category Flat Bootstrap Responsive Website Template| Checkout :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords"
-	content="Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript">
-	
-	
-	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-
-
-</script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <!--webfont-->
-<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700'
-	rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Dorsa' rel='stylesheet'
-	type='text/css'>
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Dorsa' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <!-- start menu -->
-<link href="css/megamenu.css" rel="stylesheet" type="text/css"
-	media="all" />
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="js/megamenu.js"></script>
-<script>
-	$(document).ready(function() {
-		$(".megamenu").megamenu();
-	});
-</script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <script src="js/jquery.easydropdown.js"></script>
-<script src="js/simpleCart.min.js">
-	
-</script>
+<script src="js/simpleCart.min.js"> </script>
 </head>
 <body>
 <%
-Seller s = null;
-if(session.getAttribute("data")!=null){
-	s = (Seller)session.getAttribute("data");
-}
-else{
-	response.sendRedirect("seller-login.jsp");
-}
-%>
-	<div class="banner">
+	Seller s = null;
+	if (session.getAttribute("data") != null) {
+		s = (Seller) session.getAttribute("data");
+	} else {
+		response.sendRedirect("seller-login.jsp");
+	}
+	%>
+	<div class="men_banner">
    	  <div class="container">
    	  	<div class="header_top">
    	  	   <div class="header_top_left">
@@ -80,7 +65,7 @@ else{
 			 <ul class="header_user_info">
 			  <a class="login" href="login.html">
 				<i class="user"> </i> 
-				<li class="user_desc"><%=s.getName() %></li>
+				<li class="user_desc">My Account</li>
 			  </a>
 			  <div class="clearfix"> </div>
 		     </ul>
@@ -104,12 +89,12 @@ else{
 		            <div class="clearfix"> </div>
 			 </div>
 		     <div class="clearfix"> </div>
-	  </div>
-	  <div class="header_bottom">
-	   <div class="logo">
-		  <h1><a href="index.html"><span class="m_1">W</span>Watches</a></h1>
-	   </div>
-   		<div class="menu">
+	    </div>
+   		<div class="header_bottom">
+	     <div class="logo">
+		    <h1><a href="index.html"><span class="m_1">W</span>atches</a></h1>
+	     </div>
+			<div class="menu">
 					<ul class="megamenu skyblue">
 						<li><a class="color10" href="seller-index.jsp">Home</a></li>
 						<li><a class="color2" href="#">Product</a>
@@ -164,87 +149,67 @@ else{
 					</ul>
 				</div>
 	        <div class="clearfix"> </div>
-	        </div>
 	    </div>
+	   </div>
    </div>
-	<div class="men">
-		<div class="container">
-			<div class="grid_1">
-				<h1>Upload Product</h1>
-			</div>
-			<div class="grid_1">
-			<%String msg = (String)request.getAttribute("msg"); %>
-			<%if(msg!=null){ %>
-				<h4><%out.print(msg); %></h4>
-				<%} %>
-			</div>
-			<div class="grid_1">
-			<%String msg1 = (String)request.getAttribute("msg1"); %>
-			<%if(msg1!=null){ %>
-				<h4><%out.print(msg1); %></h4>
-				<%} %>
-			</div>
-			<div class="contact_form">
-				<form action = "ProductController" method="post" enctype="multipart/form-data">
-					<div class="col-md-12 to">
-						<input type="hidden" class="text" name="id" value="<%=s.getId()%>">
-						Product Image
-						<input type="file" class="text" name="image"><br>
-						Product Name
-						<input type="text" class="text" name="pn"><br><br><br><br>
-						Product Price 
-						<input type="text" class="text" name="pp"><br><br><br><br>
-						Product Category
-						<input type="text" class="text" name="pc"> 
-					</div>
-					<div class="clearfix"></div>
-					<div class="but__center">
-						<input type="submit" name="action" value="upload">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<div class="map">
-		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3150859.767904157!2d-96.62081048651531!3d39.536794757966845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1408111832978">
-		</iframe>
-	</div>
-	<div class="footer">
-		<div class="container">
-			<div class="newsletter">
-				<h3>Newsletter</h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and
-					typesetting industry. Lorem Ipsum has been the industry's standard</p>
-				<form>
-					<input type="text" value="" onfocus="this.value='';"
-						onblur="if (this.value == '') {this.value ='';}"> <input
-						type="submit" value="SUBSCRIBE">
-				</form>
-			</div>
-			<div class="cssmenu">
-				<ul>
-					<li class="active"><a href="#">Privacy</a></li>
-					<li><a href="#">Terms</a></li>
-					<li><a href="#">Shop</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-			<ul class="social">
-				<li><a href=""> <i class="instagram"> </i>
-				</a></li>
-				<li><a href=""><i class="fb"> </i> </a></li>
-				<li><a href=""><i class="tw"> </i> </a></li>
-			</ul>
+   <div class="account-in">
+   	 <div class="container">
+		  <div class="check_box">	 
+		<div class="col-md-9 cart-items">
+			 <h1>My Products</h1>
+				<script>$(document).ready(function(c) {
+					$('.close1').on('click', function(c){
+						$('.cart-header').fadeOut('slow', function(c){
+							$('.cart-header').remove();
+						});
+						});	  
+					});
+			   </script>
+			   
+			   <%List<Product> list = ProductDao.getProductsBySid(s.getId()); %>
+			   <%for(Product p:list){ %>
+			 <div class="cart-header">
+				 <div class="close1"> </div>
+				   <div class="cart-sec simpleCart_shelfItem">
+						<div class="cart-item cyc">
+							 <img src="image/<%=p.getImage() %>" class="img-responsive" alt=""/>
+						</div>
+					   <div class="cart-item-info">
+						<h3><a href="#"><%=p.getPname() %></a></h3>
+						<div class="delivery">
+							 <p>Product Price : Rs.<%=p.getPprice() %></p>
+							 <div class="clearfix"></div>
+				        </div>	
+				        	<div class="delivery">
+							 <p>Product Category : <%=p.getPcategory() %></p>
+							 <div class="clearfix"></div>
+				        </div>
+					   </div>
+					   <div class="clearfix"></div>
+				    </div>
+			 </div>
+			 <%} %>
+			 <script>$(document).ready(function(c) {
+					$('.close2').on('click', function(c){
+							$('.cart-header2').fadeOut('slow', function(c){
+						$('.cart-header2').remove();
+					});
+					});	  
+					});
+			 </script>
+			
+		 </div>
 			<div class="clearfix"></div>
-			<div class="copy">
-				<p>
-					&copy; 2015 Watches. All Rights Reserved | Design by <a
-						href="http://w3layouts.com/" target="_blank">W3layouts</a>
-				</p>
-			</div>
-		</div>
-	</div>
+	     </div>
+	  </div>
+   </div>
+  
+   <div class="footer">
+   	 <div class="container">
+	    <div class="copy">
+           <p> &copy; 2015 Watches. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+	    </div>
+   	</div>
+   </div>
 </body>
-</html>
+</html>		

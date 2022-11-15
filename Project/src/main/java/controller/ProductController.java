@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
+import Dao.ProductDao;
 import Model.Product;
 
 /**
@@ -74,12 +75,14 @@ public class ProductController extends HttpServlet {
 			if (!imgSaveDir.exists()) {
 				imgSaveDir.mkdir();
 			}
-			p.setSid(Integer.parseInt(request.getParameter("sid")));
+			p.setSid(Integer.parseInt(request.getParameter("id")));
 			p.setImage(fileName);
 			p.setPname(request.getParameter("pn"));
 			p.setPprice(Double.parseDouble(request.getParameter("pp")));
 			p.setPcategory(request.getParameter("pc"));
-			
+			System.out.println(p);
+			ProductDao.insertProduct(p);
+			response.sendRedirect("seller-index.jsp");
 		}
 		
 	}
