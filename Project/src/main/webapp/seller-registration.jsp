@@ -184,7 +184,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<input type="text" class="text" name="contact"> 
 						<input type="text" class="text" name="address"> 
 						<input type="text" class="text" name="email">
-						<input type="text" class="text" name="password">
+						<input type="password" class="text" name="password">
 					</div>
 					<div class="clearfix"></div>
 					<div class="but__center">
