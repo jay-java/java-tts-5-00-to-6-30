@@ -178,7 +178,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h1>Seller Login</h1>
 			</div>
 			<div class="contact_form">
-				<form action = "CustomerController" method="post">
+				<form action = "SellerController" method="post">
 					<div class="col-md-12 to">
 						<input type="text" class="text" name="email">
 						<input type="text" class="text" name="password">
