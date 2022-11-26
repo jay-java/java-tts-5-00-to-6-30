@@ -1,3 +1,7 @@
+<%@page import="Dao.ProductDao"%>
+<%@page import="Model.Product"%>
+<%@page import="java.util.List"%>
+<%@page import="Model.Customer"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!--A Design by W3layouts
@@ -10,17 +14,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>Watches an E-Commerce online Shopping Category Flat
-	Bootstrap Responsive Website Template| Contact :: w3layouts</title>
+	Bootstrap Responsive Website Template| Home :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords"
 	content="Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript">
-	
-	
+<script type="application/x-javascript">	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-
 
 </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -49,7 +50,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 </head>
 <body>
-	<div class="men_banner">
+	<%
+	Customer c = null;
+	if (session.getAttribute("data") != null) {
+		c = (Customer) session.getAttribute("data");
+	} else {
+		response.sendRedirect("customer-login.jsp");
+	}
+	%>
+	<div class="banner">
 		<div class="container">
 			<div class="header_top">
 				<div class="header_top_left">
@@ -81,7 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<ul class="header_user_info">
 						<a class="login" href="login.html"> <i class="user"> </i>
-							<li class="user_desc">My Account</li>
+							<li class="user_desc"><%=c.getName()%></li>
 						</a>
 						<div class="clearfix"></div>
 					</ul>
@@ -116,21 +125,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="menu">
 					<ul class="megamenu skyblue">
-						<li><a class="color10" href="index.jsp">Home</a></li>
-						<li><a class="color2" href="#">Register</a>
+						<li><a class="color10" href="seller-index.jsp">Home</a></li>
+						<li><a class="color2" href="#">Product</a>
 							<div class="megapanel">
 								<div class="row">
 									<div class="col1">
 										<div class="h_nav">
 											<h4>
-												<a href="seller-registration.jsp">Seller</a>
+												<a href="seller-upload-product.jsp">Upload Product</a>
 											</h4>
 										</div>
 									</div>
 									<div class="col1">
 										<div class="h_nav">
 											<h4>
-												<a href="customer-registration.jsp">Customer</a>
+												<a href="seller-manage-product.jsp">Manage Product</a>
 											</h4>
 
 										</div>
@@ -138,79 +147,64 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 								</div>
 							</div></li>
-						<li><a class="color2" href="#">Login</a>
+						<li><a class="color2" href="#"><%=c.getName()%></a>
 							<div class="megapanel">
 								<div class="row">
 									<div class="col1">
 										<div class="h_nav">
 											<h4>
-												<a href="seller-login.jsp">Seller</a>
+												<a href="seller-profile.jsp">Profile</a>
 											</h4>
 										</div>
 									</div>
 									<div class="col1">
 										<div class="h_nav">
 											<h4>
-												<a href="customer-login.jsp">Customer</a>
+												<a href="seller-change-password.jsp">Change Password</a>
 											</h4>
 										</div>
 									</div>
 									<div class="col1">
 										<div class="h_nav">
 											<h4>
-												<a href="admin-login.jsp">Admin</a>
+												<a href="seller-logout.jsp">Logout</a>
 											</h4>
 										</div>
 									</div>
 
 								</div>
 							</div></li>
-						<div class="clearfix"></div>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
 			</div>
 		</div>
 	</div>
-	<div class="men">
+	<div class="main">
 		<div class="container">
-			<div class="grid_1">
-				<h1>Customer Login</h1>
-			</div>
-			<div class="contact_form">
-				<form action = "CustomerController" method="post">
-					<div class="col-md-12 to">
-						<input type="text" class="text" name="email">
-						<input type="text" class="text" name="password">
-					</div>
-					<div class="clearfix"></div>
-					<div class="but__center">
-						<input type="submit" name="action" value="login">
-					</div>
-				</form>
-			</div>
-			<div class="grid_1">
-				<h3><a href="seller-forgot-password.jsp">Forgot Password ?</a></h3>
-			</div>
+			<ul class="content-home">
+			<%List<Product> list = ProductDao.getAllProduct(); %>
+			<%for(Product p : list){ %>
+				<li class="col-sm-4"><a href="single.html" class="item-link"
+					title="">
+						<div class="bannerBox">
+							<img src="image/<%=p.getImage() %>" width="100%" height="100%">
+							<div class="item-html">
+								<h3>
+									<%=p.getPname() %>
+								</h3>
+								<p><%=p.getPprice() %></p>
+								<a href="single-product.jsp?id=<%=p.getPid()%>">View Product</a>
+							</div>
+						</div>
+				</a></li>
+				<%} %>
+			</ul>
 		</div>
-	</div>
-	<div class="map">
-		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3150859.767904157!2d-96.62081048651531!3d39.536794757966845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1408111832978">
-		</iframe>
+
 	</div>
 	<div class="footer">
 		<div class="container">
-			<div class="newsletter">
-				<h3>Newsletter</h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and
-					typesetting industry. Lorem Ipsum has been the industry's standard</p>
-				<form>
-					<input type="text" value="" onfocus="this.value='';"
-						onblur="if (this.value == '') {this.value ='';}"> <input
-						type="submit" value="SUBSCRIBE">
-				</form>
-			</div>
 			<div class="cssmenu">
 				<ul>
 					<li class="active"><a href="#">Privacy</a></li>

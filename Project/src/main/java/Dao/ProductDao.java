@@ -71,4 +71,26 @@ public class ProductDao {
 		}
 		return list;
 	}
+	public static Product getProductById(int pid) {
+		Product p = null;
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "select * from product where pid=?";
+			PreparedStatement  pst = conn.prepareStatement(sql);
+			pst.setInt(1, pid);
+			ResultSet rs = pst.executeQuery();
+			if(rs.next()) {
+				p = new Product();
+				p.setPid(rs.getInt("pid"));
+				p.setSid(rs.getInt("sid"));
+				p.setImage(rs.getString("image"));
+				p.setPname(rs.getString("pname"));
+				p.setPprice(rs.getDouble("pprice"));
+				p.setPcategory(rs.getString("pcategory"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return p;
+	}
 }
