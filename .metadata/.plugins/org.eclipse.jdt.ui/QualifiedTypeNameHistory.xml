@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="E"/>
     <fullyQualifiedTypeName name="SBI"/>
     <fullyQualifiedTypeName name="JAVA"/>
     <fullyQualifiedTypeName name="Mobile"/>
@@ -38,7 +37,6 @@
     <fullyQualifiedTypeName name="com.mysql.cj.conf.AbstractPropertyDefinition"/>
     <fullyQualifiedTypeName name="connection.DBConnection"/>
     <fullyQualifiedTypeName name="dao.UserDao"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="model.User"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="Model.Seller"/>
@@ -52,12 +50,14 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Result"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="model.product"/>
-    <fullyQualifiedTypeName name="Model.Product"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="Connectionl.DBConnection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="controller.CustomerController"/>
     <fullyQualifiedTypeName name="Model.Customer"/>
+    <fullyQualifiedTypeName name="Dao.CustomerDao"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="Model.Product"/>
 </qualifiedTypeNameHistroy>

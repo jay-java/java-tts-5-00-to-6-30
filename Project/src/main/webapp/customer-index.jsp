@@ -198,6 +198,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 				</a></li>
+				
+				<a href="#">Add to Cart</a>
 				<%} %>
 			</ul>
 		</div>
