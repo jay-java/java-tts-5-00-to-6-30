@@ -189,7 +189,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 	</ul>
 				 </div>
 		
-			    <a href="#" class="btn btn-primary btn-normal btn-inline btn_form button item_add item_1" target="_self">Add to Wishlist</a>
+			    <a href="WishListController?action=addtowishlist&cusid=<%=c.getId() %>&pid=<%=p.getPid() %>" class="btn btn-primary btn-normal btn-inline btn_form button item_add item_1" target="_self">Add to Wishlist</a>
 			    <a href="CartController?action=addtocart&cusid=<%=c.getId() %>&pid=<%=p.getPid() %>" class="btn btn-primary btn-normal btn-inline btn_form button item_add item_1" target="_self">Add to cart</a>
 			<!-- URL rewritting -->
 			</div>

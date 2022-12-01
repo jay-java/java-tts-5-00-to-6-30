@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="SBI"/>
-    <fullyQualifiedTypeName name="JAVA"/>
-    <fullyQualifiedTypeName name="Mobile"/>
-    <fullyQualifiedTypeName name="SBI1"/>
     <fullyQualifiedTypeName name="Call"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
@@ -51,13 +47,17 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Result"/>
     <fullyQualifiedTypeName name="model.product"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="Connectionl.DBConnection"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="controller.CustomerController"/>
     <fullyQualifiedTypeName name="Model.Customer"/>
     <fullyQualifiedTypeName name="Dao.CustomerDao"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="Model.Product"/>
+    <fullyQualifiedTypeName name="Model.Cart"/>
+    <fullyQualifiedTypeName name="Dao.CartDao"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="Connectionl.DBConnection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="Model.WishList"/>
+    <fullyQualifiedTypeName name="Dao.WishListDao"/>
 </qualifiedTypeNameHistroy>
