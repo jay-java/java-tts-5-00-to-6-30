@@ -3,6 +3,8 @@ package Dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import Connectionl.DBConnection;
 import Model.Seller;
@@ -122,5 +124,61 @@ public class SellerDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	public static List<Seller> getAllSellers(){
+		List<Seller> list = new ArrayList<Seller>();
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "select * from seller";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			ResultSet rs = pst.executeQuery();
+			while(rs.next()) {
+				Seller u1= new Seller();
+				u1.setId(rs.getInt("id"));
+				u1.setName(rs.getString("name"));
+				u1.setContact(rs.getLong("contact"));
+				u1.setAddress(rs.getString("address"));
+				u1.setEmail(rs.getString("email"));
+				u1.setPassword(rs.getString("password"));
+				list.add(u1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	public static void deleteSellerById(int id) {
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "delete from seller where id=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setInt(1, id);
+			pst.executeUpdate();
+			System.out.println("seller deleted");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static Seller getSellerById(int id) {
+		Seller u1 = null;
+		try {
+			Connection conn = DBConnection.createConnection();
+			String sql = "select * from seller where id=?";
+			PreparedStatement pst = conn.prepareStatement(sql);
+			pst.setInt(1, id);
+			ResultSet rs = pst.executeQuery();
+			if (rs.next()) {
+				u1 = new Seller();
+				u1.setId(rs.getInt("id"));
+				u1.setName(rs.getString("name"));
+				u1.setContact(rs.getLong("contact"));
+				u1.setAddress(rs.getString("address"));
+				u1.setEmail(rs.getString("email"));
+				u1.setPassword(rs.getString("password"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return u1;
 	}
 }
