@@ -1,3 +1,5 @@
+<%@page import="Model.Cart"%>
+<%@page import="Dao.CartDao"%>
 <%@page import="Dao.ProductDao"%>
 <%@page import="Model.Product"%>
 <%@page import="java.util.List"%>
@@ -20,8 +22,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords"
 	content="Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript">	
+<script type="application/x-javascript">
+	
+	
+	
+	
+	
+	
+	
+	
+		
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+
+
+
+
+
+
+
+
 
 </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -63,12 +83,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header_top">
 				<div class="header_top_left">
 					<div class="box_11">
-						<a href="checkout.html">
+						<a href="cart.jsp">
 							<h4>
 								<p>
-									Cart: <span class="simpleCart_total"></span> (<span
-										id="simpleCart_quantity" class="simpleCart_quantity"></span>
+									<%List<Cart> list1 = CartDao.getCartListByCusId(c.getId());%>
+									<%if(list1.size()>0){ %>
+									Cart: <span class="simpleCart_total"></span> (
+									<%out.print(list1.size()); %><span id="simpleCart_quantity"></span>
 									items)
+									<%} %>
+								
+									
 								</p>
 								<img src="images/bag.png" alt="" />
 								<div class="clearfix"></div>
@@ -183,8 +208,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="main">
 		<div class="container">
 			<ul class="content-home">
-			<%List<Product> list = ProductDao.getAllProduct(); %>
-			<%for(Product p : list){ %>
+				<%List<Product> list = ProductDao.getAllProduct(); %>
+				<%for(Product p : list){ %>
 				<li class="col-sm-4"><a href="single.html" class="item-link"
 					title="">
 						<div class="bannerBox">
@@ -198,7 +223,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 				</a></li>
-				
+
 				<a href="#">Add to Cart</a>
 				<%} %>
 			</ul>

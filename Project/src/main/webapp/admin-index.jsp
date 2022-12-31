@@ -1,3 +1,6 @@
+<%@page import="Dao.SellerDao"%>
+<%@page import="Model.Seller"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -282,10 +285,10 @@
                   	<div class="row mtbox">
                   		<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
                   			<div class="box1">
-					  			<span class="li_heart"></span>
-					  			<h3>933</h3>
+					  			<span>Sellers</span>
+					  					<%List<Seller> list = SellerDao.getAllSellers(); %>
+					  			<h3><%out.print(list.size()); %></h3>
                   			</div>
-					  			<p>933 People liked your page the last 24hs. Whoohoo!</p>
                   		</div>
                   		<div class="col-md-2 col-sm-2 box0">
                   			<div class="box1">

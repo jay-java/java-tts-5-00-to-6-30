@@ -37,5 +37,6 @@ public class ConstructorDemo {
 		c1.show();
 		copy c  = new copy(c1);
 		c.show();
+		c.i=1;
 	}
 }

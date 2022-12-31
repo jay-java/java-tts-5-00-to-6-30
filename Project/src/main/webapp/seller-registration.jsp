@@ -180,11 +180,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="contact_form">
 				<form action = "SellerController" method="post">
 					<div class="col-md-12 to">
-						<input type="text" class="text" name="name"> 
-						<input type="text" class="text" name="contact"> 
-						<input type="text" class="text" name="address"> 
-						<input type="text" class="text" name="email">
-						<input type="text" class="text" name="password">
+						<input type="text" class="text" name="name" placeholder="Enter your name">  
+						<input type="text" class="text" name="contact" placeholder="Enter your contact"> 
+						<input type="text" class="text" name="address" placeholder="Enter your address">  
+						<input type="text" class="text" name="email" placeholder="Enter your email">
+						<input type="text" class="text" name="password" placeholder="Enter your password">
 					</div>
 					<div class="clearfix"></div>
 					<div class="but__center">

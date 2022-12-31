@@ -80,6 +80,7 @@ public class SellerController extends HttpServlet {
 	 		session.setAttribute("data", s);
 	 		request.getRequestDispatcher("seller-index.jsp").forward(request, response);
 		}
+		
 		else if(action.equalsIgnoreCase("change password")) {
 			int id = Integer.parseInt(request.getParameter("id"));
 			String op = request.getParameter("op");

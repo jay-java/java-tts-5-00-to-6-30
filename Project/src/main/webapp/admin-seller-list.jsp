@@ -257,7 +257,6 @@
 										</tr>
 									</thead>
 									<%List<Seller> list = SellerDao.getAllSellers(); %>
-								
 									<tbody>
 										<%for(Seller s:list){ %>
 										<tr>

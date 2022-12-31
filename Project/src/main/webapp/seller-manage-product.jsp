@@ -169,7 +169,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			   <%List<Product> list = ProductDao.getProductsBySid(s.getId()); %>
 			   <%for(Product p:list){ %>
 			 <div class="cart-header">
-				 <div class="close1"> </div>
+				 <div class="close1"><a href="#"></a></div>
 				   <div class="cart-sec simpleCart_shelfItem">
 						<div class="cart-item cyc">
 							 <img src="image/<%=p.getImage() %>" class="img-responsive" alt=""/>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Call"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -35,7 +34,6 @@
     <fullyQualifiedTypeName name="dao.UserDao"/>
     <fullyQualifiedTypeName name="model.User"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-    <fullyQualifiedTypeName name="Model.Seller"/>
     <fullyQualifiedTypeName name="services.Service"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
@@ -43,21 +41,23 @@
     <fullyQualifiedTypeName name="Dao.SellerDao"/>
     <fullyQualifiedTypeName name="Dao.ProductDao"/>
     <fullyQualifiedTypeName name="javax.servlet.http.Part"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Result"/>
     <fullyQualifiedTypeName name="model.product"/>
     <fullyQualifiedTypeName name="controller.CustomerController"/>
     <fullyQualifiedTypeName name="Model.Customer"/>
     <fullyQualifiedTypeName name="Dao.CustomerDao"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="Model.Product"/>
-    <fullyQualifiedTypeName name="Model.Cart"/>
     <fullyQualifiedTypeName name="Dao.CartDao"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="Connectionl.DBConnection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="Model.WishList"/>
     <fullyQualifiedTypeName name="Dao.WishListDao"/>
+    <fullyQualifiedTypeName name="Model.Seller"/>
+    <fullyQualifiedTypeName name="AAAAA"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="Model.Cart"/>
 </qualifiedTypeNameHistroy>
