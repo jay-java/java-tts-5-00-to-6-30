@@ -29,23 +29,30 @@ public class CartController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String action = request.getParameter("action");
 		if(action.equalsIgnoreCase("addtocart")) {
 			Cart c = new Cart();
 			c.setCusid(Integer.parseInt(request.getParameter("cusid")));
 			c.setPid(Integer.parseInt(request.getParameter("pid")));
+			c.setQty(1);
 			System.out.println(c);
 			CartDao.insertIntoCart(c);
 			response.sendRedirect("cart.jsp");
 		}
+		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		int qty = Integer.parseInt(request.getParameter("qty"));
+		System.out.println(qty);
+		double price = Double.parseDouble(request.getParameter("price"));
+		double total = price*qty;
+		System.out.println(total);
+		
 	}
 
 }
