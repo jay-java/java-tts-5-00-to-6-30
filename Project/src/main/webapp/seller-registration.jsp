@@ -49,6 +49,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 </head>
 <body>
+<script>  
+var request=new XMLHttpRequest();  
+function searchInfo()
+{  
+	var name=document.form.email.value;  
+	var url="AjaxSearch.jsp?val="+name;  
+  	try
+  	{  
+		request.onreadystatechange=function()
+		{  
+			if(request.readyState==4)
+			{  
+				var val=request.responseText;  
+				document.getElementById('tops').innerHTML=val;  
+			}  
+		}  
+		request.open("GET",url,true);  
+		request.send();  
+	}
+  	catch(e)
+  	{
+  		alert("Unable to connect to server");
+  	}  
+}  
+</script>  
 	<div class="men_banner">
 		<div class="container">
 			<div class="header_top">
@@ -178,12 +203,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h1>Seller Registration</h1>
 			</div>
 			<div class="contact_form">
-				<form action = "SellerController" method="post">
+				<form action = "SellerController" method="post" name="form">
 					<div class="col-md-12 to">
 						<input type="text" class="text" name="name" placeholder="Enter your name">  
 						<input type="text" class="text" name="contact" placeholder="Enter your contact"> 
 						<input type="text" class="text" name="address" placeholder="Enter your address">  
-						<input type="text" class="text" name="email" placeholder="Enter your email">
+						<input type="text" class="text" name="email" onblur="searchInfo()" placeholder="Enter your email">
+						<span id="tops" style="color:red;"></span>
 						<input type="text" class="text" name="password" placeholder="Enter your password">
 					</div>
 					<div class="clearfix"></div>
