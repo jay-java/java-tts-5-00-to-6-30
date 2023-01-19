@@ -356,8 +356,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<ul class="qty">
 									<td data-th="Quantity">
 										<form action="CartController" method="post">
+										 <%double total = (double)request.getAttribute("total"); %>
+										 
 											<input type="hidden" name="price" value="<%=p.getPprice()%>">
 											<input type="number" name="qty"
+												class="form-control form-control-lg text-center" value="1"
+												onchange="this.form.submit();">
+												<input type="number" name="qty"
 												class="form-control form-control-lg text-center" value="1"
 												onchange="this.form.submit();">
 										</form>
@@ -366,6 +371,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="delivery">
 									<p>
 										Price : Rs.<%=p.getPprice()%></p>
+										<%if(total != 0){ %>
+											Price : <%=total %>
+										<%} %> 
 									<span>Delivered in 2-3 business days</span>
 									<div class="clearfix"></div>
 								</div>

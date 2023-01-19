@@ -52,6 +52,9 @@ public class CartController extends HttpServlet {
 		double price = Double.parseDouble(request.getParameter("price"));
 		double total = price*qty;
 		System.out.println(total);
+		request.setAttribute("total", total);
+		request.setAttribute("qty", qty);
+		request.getRequestDispatcher("cart.jsp").forward(request, response);
 		
 	}
 
